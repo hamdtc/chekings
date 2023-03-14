@@ -10,7 +10,7 @@
 function greetingFnc() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // resolve("Hi How are you?");
+        resolve("Hi How are you?");
         reject("restaurant was closed");
       }, 1000);
     });
@@ -28,7 +28,7 @@ function greetingFnc() {
   function giveFood() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // resolve("giving food...");
+        resolve("giving food...");
         reject("no bread ");
       }, 1000);
     });
@@ -37,8 +37,8 @@ function greetingFnc() {
   function takePayment() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve("Please pay...");
-        // reject("Payment wallet balance is 0");
+       // resolve("Please pay...");
+         reject("Payment wallet balance is 0");
       }, 1000);
     });
   }
