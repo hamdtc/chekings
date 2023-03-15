@@ -85,7 +85,12 @@ function greetingFnc() {
 
   // all should be working else it wont work means give only error
   //there is promise.any for any of them working fine
- Promise.all([greetingFnc(), takeOrder(), takePayment()])
+//in .allsettled there is no need of catch because all will resolve or reject means all will settle
+//promise.race() will give what will be the fastest output only even if it is rejecting
+//any give fastest resolved and race fastest output
+
+
+ Promise.allSettled([greetingFnc(), takeOrder(), takePayment()])
   .then((res) => {
     console.log("RES", res,new Date());
   })
