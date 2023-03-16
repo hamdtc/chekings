@@ -97,13 +97,13 @@ function greetingFnc() {
 //   .catch((error) => {
 //     console.log("ERROR", error);
 //   });
-
-async function promiseRun(){
- let a= greetingFnc();
-  console.log("hi there");
-  return a;
+async function nestingPromises() {
+  const res1 = await promise1();
+  console.log(res1, new Date());
+  const res2 = await promise2();
+  console.log(res2, new Date());
+  const res3 = await promise3();
+  console.log(res3, new Date());
 }
-let s=promiseRun();
-console.log(s);
 
  
