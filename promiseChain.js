@@ -90,12 +90,20 @@ function greetingFnc() {
 //any give fastest resolved and race fastest output
 
 
- Promise.allSettled([greetingFnc(), takeOrder(), takePayment()])
-  .then((res) => {
-    console.log("RES", res,new Date());
-  })
-  .catch((error) => {
-    console.log("ERROR", error);
-  });
+//  Promise.allSettled([greetingFnc(), takeOrder(), takePayment()])
+//   .then((res) => {
+//     console.log("RES", res,new Date());
+//   })
+//   .catch((error) => {
+//     console.log("ERROR", error);
+//   });
+
+async function promiseRun(){
+ let a= greetingFnc();
+  console.log("hi there");
+  return a;
+}
+let s=promiseRun();
+console.log(s);
 
  
